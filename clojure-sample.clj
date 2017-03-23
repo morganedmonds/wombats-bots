@@ -4,11 +4,11 @@
 
   (let [command-options [(repeat 10 {:action :move
                                      :metadata {}})
-                         (repeat 3 {:action :turn
+                         (repeat 5 {:action :turn
                                     :metadata {:direction (rand-nth turn-directions)}})
                          (repeat 15 {:action :shoot
                                       :metadata {}})
-                         (repeat 100 {:action :smoke
+                         (repeat 1 {:action :smoke
                                     :metadata {:direction (rand-nth smoke-directions)}})]]
 
     {:command (rand-nth (flatten command-options))
